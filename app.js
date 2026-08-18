@@ -285,7 +285,9 @@ const PROJECTS = [
   {slug:'tens',         dom:'tens.co',                  kind:'shopify',     sector:'Eyewear',             year:'2023', layout:'shop'},
 ];
 const bySlug = s => PROJECTS.find(p=>p.slug===s);
-
+function projectImage(p){
+  return `Images/${p.slug}.png`;
+}
 /* ---------- generated site artwork (three distinct layouts) ---------- */
 function artSite(p, w=560, h=360){
   const c = KINDS[p.kind].c, ink = C.ink;

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>About — Cecen</title>
+<meta name="description" content="Seven years of building websites — how Cecen works, and what he's like to work with.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="top"><div class="wrap in">
+  <a class="brand" href="index.html"><span class="blob"></span> Cecen</a>
+  <div class="links">
+    <a href="index.html">Home</a><a href="work.html">Work</a><a href="about.html">About</a>
+    <a href="mailto:hello@cecen.dev">Say hi</a>
+  </div>
+</div></nav>
+
+<section class="blk" style="position:relative;overflow:hidden">
+  <div class="wrap" style="display:grid;grid-template-columns:1fr 320px;gap:clamp(24px,5vw,56px);align-items:center" id="topGrid">
+    <div>
+      <span class="eyeb">What's his deal?</span>
+      <h1 style="font-size:clamp(2.2rem,6vw,4rem);max-width:15ch;margin-bottom:16px" data-kin>Seven years, thirty-odd sites</h1>
+      <p class="lead">I started in 2016 fixing other people's WordPress themes and worked my way up to running builds end to end — design, code, testing, handover. Somewhere along the way I stopped thinking of myself as just a developer.</p>
+    </div>
+    <div id="portrait" class="plx" data-plx="-6"></div>
+  </div>
+  <span class="sticker" style="--r:-11deg;bottom:8%;left:3%"><svg width="60" height="60"><use href="#s-wrench"/></svg></span>
+</section>
+
+<div class="strip"><div class="rail" id="rail"></div></div>
+
+<!-- TIMELINE -->
+<section class="blk rv">
+  <div class="wrap tight">
+    <span class="eyeb">The road so far</span>
+    <h2 class="big" data-kin>Where I've been</h2>
+    <div style="display:grid;gap:14px;margin-top:36px" id="road"></div>
+  </div>
+</section>
+
+<!-- HOW I WORK -->
+<section class="blk rv">
+  <div class="wrap tight">
+    <span class="eyeb">Working with me</span>
+    <h2 class="big" data-kin>What it's actually like</h2>
+    <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(250px,1fr));margin-top:36px">
+      <div class="card" style="padding:26px"><h3 style="font-size:1.1rem;margin-bottom:8px">You get one contact</h3><p style="margin:0;color:var(--ink2);font-size:.94rem">Me. No account manager relaying messages, no mystery about who's doing the work.</p></div>
+      <div class="card" style="padding:26px"><h3 style="font-size:1.1rem;margin-bottom:8px">Fixed scope, fixed price</h3><p style="margin:0;color:var(--ink2);font-size:.94rem">Agreed before we start. If the scope changes we talk about it — you're never surprised by an invoice.</p></div>
+      <div class="card" style="padding:26px"><h3 style="font-size:1.1rem;margin-bottom:8px">Weekly updates</h3><p style="margin:0;color:var(--ink2);font-size:.94rem">Short, honest, in plain English. Including the weeks where the news isn't great.</p></div>
+      <div class="card" style="padding:26px"><h3 style="font-size:1.1rem;margin-bottom:8px">Docs at the end</h3><p style="margin:0;color:var(--ink2);font-size:.94rem">A written handover so anyone who comes after me can pick it up without ringing me.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- OFF THE CLOCK -->
+<section class="blk rv">
+  <div class="wrap tight">
+    <span class="eyeb">Off the clock</span>
+    <h2 class="big" data-kin>Away from the screen</h2>
+    <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr));margin-top:34px" id="hobbies"></div>
+  </div>
+</section>
+
+<section class="blk rv">
+  <div class="wrap">
+    <div class="finale">
+      <h2>Fancy working together?</h2>
+      <p>Send me a line about the project. I'll come back within a day, honestly, either way.</p>
+      <div class="cta" style="justify-content:center">
+        <a href="mailto:hello@cecen.dev" class="btn sun">hello@cecen.dev</a>
+        <a href="work.html" class="btn ghost">See the work first</a>
+      </div>
+    </div>
+    <div class="foot"><span>© 2026 Cecen</span><a href="index.html">Home</a><a href="work.html">Work</a></div>
+  </div>
+</section>
+
+<script src="app.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+  document.getElementById('portrait').innerHTML = artCecen();
+
+  const bits=[['s-coffee','Coffee, any hour'],['s-bat','Cricket obsessive'],['s-plane','Always planning a trip'],
+    ['s-book','Reader'],['s-mango','Allergic to processed mango'],['s-walk','Walks to debug'],
+    ['s-code','7 years in'],['s-cart','Shopify nerd'],['s-bolt','Fast sites only'],['s-star','30+ launches']];
+  document.getElementById('rail').innerHTML=[...bits,...bits]
+    .map(([id,t])=>`<span class="mini"><svg width="25" height="25"><use href="#${id}"/></svg>${t}</span>`).join('');
+
+  const road=[
+    ['2016','Website Developer','Infinity Infoway','First proper job. Learned to actually ship.'],
+    ['2017','Fullstack Developer','MNS Technologies','Front to back, start to finish.'],
+    ['2018','Freelancer','Independent contracts','Learned to talk to clients, not just code.'],
+    ['2020','Fullstack Developer','CX Technologies','Bigger builds, real teams, real deadlines.'],
+    ['2023','Designer','Mark Wilson and others','Moved properly into the design side.'],
+    ['2024','Project work','Selected clients','Picking the work I want. Still going.'],
+  ];
+  document.getElementById('road').innerHTML=road.map(([y,r,c,n])=>`
+    <div class="card" style="display:grid;grid-template-columns:84px 1fr;gap:18px;align-items:center;padding:18px 22px">
+      <span style="font-family:Bricolage Grotesque;font-weight:800;font-size:1.3rem">${y}</span>
+      <div><h4 style="font-size:1.02rem">${r}</h4>
+      <p style="margin:2px 0 0;color:var(--ink2);font-size:.9rem">${c} — ${n}</p></div>
+    </div>`).join('');
+
+  const hob=[['s-book','Reading','Usually two at once, finishing neither.'],
+    ['s-bat','Cricket','Will clear a weekend for a test match.'],
+    ['s-plane','Travel','Always half-planning the next trip.'],
+    ['s-walk','Walking','Best debugger I own.'],
+    ['s-coffee','Coffee','Any form, any hour, no notes.'],
+    ['s-mango','Not mangoes','Processed ones. Only thing I react to.']];
+  document.getElementById('hobbies').innerHTML=hob.map(([id,t,d])=>`
+    <div class="card" style="padding:22px">
+      <svg width="42" height="42" style="margin-bottom:12px"><use href="#${id}"/></svg>
+      <h4 style="font-size:1.02rem;margin-bottom:5px">${t}</h4>
+      <p style="margin:0;color:var(--ink2);font-size:.88rem">${d}</p>
+    </div>`).join('');
+
+  if(window.innerWidth<820) document.getElementById('topGrid').style.gridTemplateColumns='1fr';
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Work — Cecen</title>
+<meta name="description" content="Fifteen live websites built by Cecen across WordPress, WooCommerce, Shopify and PHP.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="top"><div class="wrap in">
+  <a class="brand" href="index.html"><span class="blob"></span> Cecen</a>
+  <div class="links">
+    <a href="index.html">Home</a><a href="work.html">Work</a><a href="about.html">About</a>
+    <a href="mailto:hello@cecen.dev">Say hi</a>
+  </div>
+</div></nav>
+
+<section class="blk" style="padding-bottom:0;position:relative">
+  <div class="wrap">
+    <span class="eyeb">Everything I've shipped</span>
+    <h1 style="font-size:clamp(2.2rem,6vw,4.2rem);max-width:16ch;margin-bottom:16px" data-kin>Fifteen live sites</h1>
+    <p class="lead">Brochure sites, online stores and a few rescues. Filter by what it's built on — each card opens a full write-up.</p>
+    <div class="filters" id="filters"></div>
+  </div>
+  <span class="sticker" style="--r:-12deg;top:14%;right:3%"><svg width="62" height="62"><use href="#s-cart"/></svg></span>
+</section>
+
+<section class="blk" style="padding-top:26px">
+  <div class="wrap"><div class="grid" id="grid"></div></div>
+</section>
+
+<section class="blk rv">
+  <div class="wrap">
+    <div class="finale">
+      <h2>Want yours on this page?</h2>
+      <p>Tell me what you're building and I'll tell you honestly whether I'm the right fit.</p>
+      <div class="cta" style="justify-content:center">
+        <a href="mailto:hello@cecen.dev" class="btn sun">hello@cecen.dev</a>
+      </div>
+    </div>
+    <div class="foot">
+      <span>© 2026 Cecen</span><a href="index.html">Home</a><a href="about.html">About</a>
+    </div>
+  </div>
+</section>
+
+<script src="app.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+  const f=document.getElementById('filters'), g=document.getElementById('grid');
+  f.innerHTML=['all',...Object.keys(KINDS)].map((k,i)=>
+    `<button class="${i?'':'on'}" data-f="${k}">${k==='all'?'Everything':KINDS[k].label}</button>`).join('');
+  function paint(kind){
+    g.innerHTML=PROJECTS.filter(p=>kind==='all'||p.kind===kind).map(p=>`
+      <a class="wcard" href="case.html?p=${p.slug}">
+        <div class="art">${artSite(p)}</div>
+        <div class="meta"><span><b>${p.dom}</b><small>${p.sector} · ${p.year}</small></span>
+        <span class="tag" style="background:${KINDS[p.kind].c}2e">${KINDS[p.kind].label}</span></div>
+      </a>`).join('');
+  }
+  paint('all');
+  f.addEventListener('click',e=>{
+    const b=e.target.closest('button'); if(!b) return;
+    f.querySelectorAll('button').forEach(x=>x.classList.remove('on'));
+    b.classList.add('on'); paint(b.dataset.f);
+  });
+});
+</script>
+</body>
+</html>

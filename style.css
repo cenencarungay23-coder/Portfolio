@@ -103,7 +103,16 @@ section.blk{padding:clamp(56px,8vw,104px) 0;position:relative;}
 .wcard{display:block;text-decoration:none;background:#fff;border:2px solid var(--ink);border-radius:22px;overflow:hidden;box-shadow:var(--shadow);transition:transform .22s,box-shadow .22s;}
 .wcard:hover{transform:translate(-3px,-5px);box-shadow:var(--shadow-lg);}
 .wcard .art{border-bottom:2px solid var(--ink);overflow:hidden;}
-.wcard .art svg{width:100%;height:auto;display:block;transition:transform .35s;}
+.wcard .art img{
+  width:100%;
+  height:auto;
+  display:block;
+  transition:transform .35s;
+}
+
+.wcard:hover .art img{
+  transform:scale(1.04);
+}
 .wcard:hover .art svg{transform:scale(1.04);}
 .wcard .meta{padding:15px 17px;display:flex;align-items:center;justify-content:space-between;gap:10px;}
 .wcard .meta b{font-size:1rem;}

@@ -26,22 +26,25 @@
       <span class="eyeb">What's his deal?</span>
       <h1 style="font-size:clamp(2.2rem,6vw,4rem);max-width:15ch;margin-bottom:16px" data-kin>8+ years, countless builds</h1>
       <p class="lead">I’m Cenen, a professional web developer and designer with more than 8 years of experience building user-friendly, high-performing websites. I work across design, development, testing and handover, helping businesses turn ideas into websites that actually work.</p>
-    </div>
-    <div class="about-stats">
-  <div class="about-stat">
-    <strong>8+</strong>
-    <span>Years building<br>for the web</span>
+ <div style="display:flex;gap:12px;margin-top:28px;flex-wrap:wrap">
+
+  <div style="background:#fff;border:2px solid var(--ink);border-radius:16px;padding:14px 18px;box-shadow:4px 4px 0 var(--ink);min-width:120px">
+    <strong style="display:block;font-family:'Bricolage Grotesque';font-size:1.5rem;line-height:1">8+</strong>
+    <span style="display:block;font-size:.72rem;color:var(--ink2);margin-top:6px">Years building<br>for the web</span>
   </div>
 
-  <div class="about-stat">
-    <strong>100+</strong>
-    <span>Websites<br>& projects</span>
+  <div style="background:#fff;border:2px solid var(--ink);border-radius:16px;padding:14px 18px;box-shadow:4px 4px 0 var(--ink);min-width:120px">
+    <strong style="display:block;font-family:'Bricolage Grotesque';font-size:1.5rem;line-height:1">100+</strong>
+    <span style="display:block;font-size:.72rem;color:var(--ink2);margin-top:6px">Websites<br>& projects</span>
   </div>
 
-  <div class="about-stat">
-    <strong>END-TO-END</strong>
-    <span>Design → Build<br>→ Launch</span>
+  <div style="background:#fff;border:2px solid var(--ink);border-radius:16px;padding:14px 18px;box-shadow:4px 4px 0 var(--ink);min-width:145px">
+    <strong style="display:block;font-family:'Bricolage Grotesque';font-size:1.15rem;line-height:1">END-TO-END</strong>
+    <span style="display:block;font-size:.72rem;color:var(--ink2);margin-top:6px">Design → Build<br>→ Launch</span>
   </div>
+
+</div>
+   
 </div>
     <div id="portrait" class="plx" data-plx="-6"></div>
   </div>
@@ -101,9 +104,9 @@
 document.addEventListener('DOMContentLoaded',()=>{
   document.getElementById('portrait').innerHTML = artCecen();
 
-  const bits=[['s-coffee','Coffee, any hour'],['s-bat','Cricket obsessive'],['s-plane','Always planning a trip'],
-    ['s-book','Reader'],['s-mango','Allergic to processed mango'],['s-walk','Walks to debug'],
-    ['s-code','7 years in'],['s-cart','Shopify nerd'],['s-bolt','Fast sites only'],['s-star','30+ launches']];
+ const bits=[['s-coffee','Coffee, any hour'],['s-bat','Cricket obsessive'],['s-plane','Like to explore'],
+    ['s-book','Reader'],['s-walk','Walks to debug'],
+    ['s-code','8+ years building'],['s-layers','Full-stack builder'],['s-bolt','Fast sites only'],['s-compass','Worked across multiple niches']];
   document.getElementById('rail').innerHTML=[...bits,...bits]
     .map(([id,t])=>`<span class="mini"><svg width="25" height="25"><use href="#${id}"/></svg>${t}</span>`).join('');
 
@@ -113,7 +116,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     ['2018','Freelancer','Independent contracts','Learned to talk to clients, not just code.'],
     ['2020','Fullstack Developer','CX Technologies','Bigger builds, real teams, real deadlines.'],
     ['2023','Designer','Mark Wilson and others','Moved properly into the design side.'],
-    ['2024','Project work','Selected clients','Picking the work I want. Still going.'],
+    ['2026','Project work','Selected clients','Picking the work I want. Still going.'],
   ];
   document.getElementById('road').innerHTML=road.map(([y,r,c,n])=>`
     <div class="card" style="display:grid;grid-template-columns:84px 1fr;gap:18px;align-items:center;padding:18px 22px">

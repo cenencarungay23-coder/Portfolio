@@ -68,10 +68,10 @@
     <span class="eyeb">Working with me</span>
     <h2 class="big" data-kin>What it's actually like</h2>
     <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(250px,1fr));margin-top:36px">
-      <div class="card" style="padding:26px"><h3 style="font-size:1.1rem;margin-bottom:8px">You get one contact</h3><p style="margin:0;color:var(--ink2);font-size:.94rem">Me. No account manager relaying messages, no mystery about who's doing the work.</p></div>
-      <div class="card" style="padding:26px"><h3 style="font-size:1.1rem;margin-bottom:8px">Fixed scope, fixed price</h3><p style="margin:0;color:var(--ink2);font-size:.94rem">Agreed before we start. If the scope changes we talk about it — you're never surprised by an invoice.</p></div>
-      <div class="card" style="padding:26px"><h3 style="font-size:1.1rem;margin-bottom:8px">Weekly updates</h3><p style="margin:0;color:var(--ink2);font-size:.94rem">Short, honest, in plain English. Including the weeks where the news isn't great.</p></div>
-      <div class="card" style="padding:26px"><h3 style="font-size:1.1rem;margin-bottom:8px">Docs at the end</h3><p style="margin:0;color:var(--ink2);font-size:.94rem">A written handover so anyone who comes after me can pick it up without ringing me.</p></div>
+      <div class="card" style="padding:26px"><h3 style="font-size:1.1rem;margin-bottom:8px">Clear communication</h3><p style="margin:0;color:var(--ink2);font-size:.94rem">You always know what's happening, what's next, and where things stand. No chasing, no disappearing, no technical jargon when plain English will do.</p></div>
+      <div class="card" style="padding:26px"><h3 style="font-size:1.1rem;margin-bottom:8px">I take ownership</h3><p style="margin:0;color:var(--ink2);font-size:.94rem">From the first discussion to launch and handover, I take responsibility for the work. I don't just complete tasks, I look for problems, make suggestions, and keep things moving.</p></div>
+      <div class="card" style="padding:26px"><h3 style="font-size:1.1rem;margin-bottom:8px">No surprises</h3><p style="margin:0;color:var(--ink2);font-size:.94rem">Scope, priorities and expectations are clear before we start. If something changes along the way, we discuss it first rather than letting it become a surprise later.</p></div>
+      <div class="card" style="padding:26px"><h3 style="font-size:1.1rem;margin-bottom:8px">Built to last</h3><p style="margin:0;color:var(--ink2);font-size:.94rem">I don't just aim to get a website live. I build with clean, maintainable code and a proper handover, so you're not left dependent on me for every small change.</p></div>
     </div>
   </div>
 </section>
@@ -125,12 +125,12 @@ document.addEventListener('DOMContentLoaded',()=>{
       <p style="margin:2px 0 0;color:var(--ink2);font-size:.9rem">${c} — ${n}</p></div>
     </div>`).join('');
 
-  const hob=[['s-book','Reading','Usually two at once, finishing neither.'],
-    ['s-bat','Cricket','Will clear a weekend for a test match.'],
-    ['s-plane','Travel','Always half-planning the next trip.'],
-    ['s-walk','Walking','Best debugger I own.'],
-    ['s-coffee','Coffee','Any form, any hour, no notes.'],
-    ['s-mango','Not mangoes','Processed ones. Only thing I react to.']];
+  const hob=[['s-book','Reading','I like reading things and learning.'],
+    ['s-bat','Cricket','I like to spend my free hours with a bat in my hand.'],
+    ['s-plane','Travel','I like to explore new places and meet new people.'],
+    ['s-walk','Walking','Walks to debug.'],
+    ['s-coffee','Coffee','Any form, any hour. Strong one.'],
+    ['s-compass','Worked across multiple niches','Different industries, different challenges, different ways of building.']];
   document.getElementById('hobbies').innerHTML=hob.map(([id,t,d])=>`
     <div class="card" style="padding:22px">
       <svg width="42" height="42" style="margin-bottom:12px"><use href="#${id}"/></svg>

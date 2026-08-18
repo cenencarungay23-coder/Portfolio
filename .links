@@ -40,25 +40,25 @@ nav.top .links a:hover,nav.top .links a.on{border-color:var(--ink);background:#f
   font-weight:700;
   font-size:.97rem;
   min-height:52px;
-  padding:14px 24px;
+  padding:14px 28px;
   border-radius:999px;
   border:2px solid var(--ink);
   background:#fff;
   cursor:pointer;
-  box-shadow:4px 5px 0 var(--ink);
+  box-shadow:3px 3px 0 var(--ink);
   transition:transform .16s,box-shadow .16s;
   font-family:inherit;
   color:var(--ink);
 }
 
 .btn:hover{
-  transform:translate(-2px,-2px);
-  box-shadow:6px 7px 0 var(--ink);
+  transform:translate(-1px,-1px);
+  box-shadow:4px 4px 0 var(--ink);
 }
 
 .btn:active{
-  transform:translate(2px,2px);
-  box-shadow:1px 2px 0 var(--ink);
+  transform:translate(1px,1px);
+  box-shadow:1px 1px 0 var(--ink);
 }
 .btn.solid{background:var(--tomato);color:#fff;}
 .btn.sun{background:var(--sun);}

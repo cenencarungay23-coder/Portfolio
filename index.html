@@ -31,7 +31,7 @@
       <h1 style="font-size:clamp(2.4rem,7vw,5.2rem);max-width:14ch;margin-bottom:18px">
         <span data-kin>Websites should just</span> <span class="hl">work.</span>
       </h1>
-      <p class="lead">Hey — I'm Cecen. I am Cenen, a professional web developer and designer with more than 8 years of experience crafting innovative, user-friendly, and high-performing websites. </p>
+      <p class="lead">Hey. I am Cenen, a professional web developer and designer with more than 8 years of experience crafting innovative, user-friendly, and high-performing websites. </p>
      
       <div class="cta">
         <a href="work.html" class="btn solid">See the work</a>
@@ -123,9 +123,9 @@ document.addEventListener('DOMContentLoaded',()=>{
   document.getElementById('deskArt').innerHTML = artDesk();
   playSequence();   // must run AFTER the desk SVG exists in the DOM
 
-  const bits=[['s-coffee','Coffee, any hour'],['s-bat','Cricket obsessive'],['s-plane','Always planning a trip'],
-    ['s-book','Reader'],['s-mango','Allergic to processed mango'],['s-walk','Walks to debug'],
-    ['s-code','7 years in'],['s-cart','Shopify nerd'],['s-bolt','Fast sites only'],['s-star','30+ launches']];
+  const bits=[['s-coffee','Coffee, any hour'],['s-bat','Cricket obsessive'],['s-plane','Like to explore'],
+    ['s-book','Reader'],['s-walk','Walks to debug'],
+    ['s-code','8+ years building'],['s-layers','Full-stack builder'],['s-bolt','Fast sites only'],['s-compass','Worked across multiple niches']];
   document.getElementById('rail').innerHTML=[...bits,...bits]
     .map(([id,t])=>`<span class="mini"><svg width="25" height="25"><use href="#${id}"/></svg>${t}</span>`).join('');
 

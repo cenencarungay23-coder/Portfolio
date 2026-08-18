@@ -58,6 +58,19 @@ const SPRITE = `
 <symbol id="s-wrench" viewBox="0 0 100 100">
   <path d="M64 14a20 20 0 0 0-19 26L16 69a8 8 0 0 0 11 11l29-29a20 20 0 0 0 26-19l-14 8-11-6-1-12z" fill="${C.grape}" stroke="${C.ink}" stroke-width="5" stroke-linejoin="round"/>
 </symbol>
+
+<symbol id="s-layers" viewBox="0 0 100 100">
+  <path d="M50 10 10 30l40 20 40-20z" fill="#fff" stroke="${C.ink}" stroke-width="5" stroke-linejoin="round"/>
+  <path d="m10 50 40 20 40-20" fill="none" stroke="${C.sky}" stroke-width="5" stroke-linejoin="round"/>
+  <path d="m10 68 40 20 40-20" fill="none" stroke="${C.grass}" stroke-width="5" stroke-linejoin="round"/>
+</symbol>
+
+<symbol id="s-compass" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="38" fill="#fff" stroke="${C.ink}" stroke-width="5"/>
+  <path d="m67 33-13 30-30 13 13-30z" fill="${C.tomato}" stroke="${C.ink}" stroke-width="5" stroke-linejoin="round"/>
+  <circle cx="50" cy="50" r="5" fill="${C.sun}" stroke="${C.ink}" stroke-width="4"/>
+</symbol>
+
 </defs></svg>`;
 
 /* ---------- big scene: the desk ---------- */

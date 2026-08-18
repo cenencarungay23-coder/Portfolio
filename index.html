@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded',()=>{
       const p=bySlug(s);
 return `<a class="wcard" href="case.html?p=${p.slug}">
   <div class="art">
-    <img src="images/${p.slug}.png" alt="${p.dom} website preview">
+   <img src="${p.slug === 'paolita' ? 'Paolita.png' : `images/${p.slug}.png`}" alt="${p.dom} website preview">
   </div>
   <div class="meta">
     <span>

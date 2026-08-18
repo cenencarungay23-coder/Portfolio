@@ -25,11 +25,8 @@
 <script>
 document.addEventListener('DOMContentLoaded',()=>{
   const slug = new URLSearchParams(location.search).get('p') || 'paolita';
-  const p = bySlug(slug) || PROJECTS[0];
-  const imagePath = p.slug === 'paolita'
-  ? 'Paolita.png'
-  : `Images/${p.slug}.png`;
-  const k = KINDS[p.kind];
+const p = bySlug(slug) || PROJECTS[0];
+const k = KINDS[p.kind];
   const i = PROJECTS.indexOf(p);
   const next = PROJECTS[(i+1) % PROJECTS.length];
   document.title = `${p.dom} — Cecen`;
@@ -51,10 +48,10 @@ document.addEventListener('DOMContentLoaded',()=>{
   </div></section>
 
   <div class="wrap tight">
-    <div class="shotframe">
-  <img src="${imagePath}" alt="${p.dom} website screenshot">
+<div class="shotframe">
+  <img src="${projectImage(p)}" alt="${p.dom} website screenshot">
 </div>
-    ${todo('Replace this illustration with a real screenshot of the live site.')}
+ 
   </div>
 
   <section class="blk" style="padding-top:20px"><div class="wrap tight case-body">
@@ -71,8 +68,8 @@ document.addEventListener('DOMContentLoaded',()=>{
     </ul>
     ${todo('Swap these for the specific things you actually did on this project.')}
 
-    <div class="shotframe">
-  <img src="${imagePath}" alt="${p.dom} website screenshot">
+<div class="shotframe">
+  <img src="${projectImage(p)}" alt="${p.dom} website screenshot">
 </div>
 
     <h3>The result</h3>

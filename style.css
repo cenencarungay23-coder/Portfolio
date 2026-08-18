@@ -32,12 +32,34 @@ nav.top .links a:hover,nav.top .links a.on{border-color:var(--ink);background:#f
 
 /* ---------- buttons ---------- */
 .btn{
-  display:inline-flex;align-items:center;gap:9px;text-decoration:none;font-weight:700;font-size:.97rem;
-  padding:14px 24px;border-radius:99px;border:2px solid var(--ink);background:#fff;cursor:pointer;
-  box-shadow:4px 4px 0 var(--ink);transition:transform .16s,box-shadow .16s;font-family:inherit;color:var(--ink);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  text-decoration:none;
+  font-weight:700;
+  font-size:.97rem;
+  min-height:52px;
+  padding:14px 24px;
+  border-radius:99px;
+  border:2px solid var(--ink);
+  background:#fff;
+  cursor:pointer;
+  box-shadow:4px 5px 0 var(--ink);
+  transition:transform .16s,box-shadow .16s;
+  font-family:inherit;
+  color:var(--ink);
 }
-.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink);}
-.btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink);}
+
+.btn:hover{
+  transform:translate(-2px,-2px);
+  box-shadow:6px 7px 0 var(--ink);
+}
+
+.btn:active{
+  transform:translate(2px,2px);
+  box-shadow:1px 2px 0 var(--ink);
+}
 .btn.solid{background:var(--tomato);color:#fff;}
 .btn.sun{background:var(--sun);}
 .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px;}

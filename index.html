@@ -132,10 +132,18 @@ document.addEventListener('DOMContentLoaded',()=>{
   document.getElementById('featured').innerHTML =
     ['paolita','igkhair','galialahav','method'].map(s=>{
       const p=bySlug(s);
-      return `<a class="wcard" href="case.html?p=${p.slug}">
-        <div class="art">${artSite(p)}</div>
-        <div class="meta"><span><b>${p.dom}</b><small>${p.sector} · ${p.year}</small></span>
-        <span class="tag" style="background:${KINDS[p.kind].c}2e">${KINDS[p.kind].label}</span></div></a>`;
+return `<a class="wcard" href="case.html?p=${p.slug}">
+  <div class="art">
+    <img src="images/${p.slug}.jpg" alt="${p.dom} website preview">
+  </div>
+  <div class="meta">
+    <span>
+      <b>${p.dom}</b>
+      <small>${p.sector} · ${p.year}</small>
+    </span>
+    <span class="tag" style="background:${KINDS[p.kind].c}2e">${KINDS[p.kind].label}</span>
+  </div>
+</a>`;
     }).join('');
 
   function tick(){

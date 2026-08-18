@@ -426,4 +426,75 @@ document.addEventListener('DOMContentLoaded', ()=>{
   onScroll();
 
   if(document.getElementById('screenLayer')) playSequence();
+  function renderLogo() {
+  const logo = document.getElementById('siteLogo');
+  if (!logo) return;
+
+  logo.innerHTML = `
+    <span class="logo-name">CENEN</span>
+    <span class="logo-separator">—</span>
+    <span class="logo-role"></span>
+    <span class="logo-caret">|</span>
+  `;
+
+  const role = logo.querySelector('.logo-role');
+  const caret = logo.querySelector('.logo-caret');
+
+  const words = ['FULL-STACK', 'DEVELOPER'];
+  let wordIndex = 0;
+
+  function typeWord() {
+    if (wordIndex >= words.length) {
+      setTimeout(() => {
+        caret.style.display = 'none';
+      }, 1000);
+      return;
+    }
+
+    const span = document.createElement('span');
+    span.className = 'logo-word';
+    span.textContent = words[wordIndex];
+
+    role.appendChild(span);
+
+    wordIndex++;
+    setTimeout(typeWord, 550);
+  }
+
+  setTimeout(typeWord, 300);
+}
+  const logo = document.getElementById('siteLogo');
+  if (!logo) return;
+
+  logo.innerHTML = `
+    <span class="logo-name"></span>
+    <span class="logo-separator">—</span>
+    <span class="logo-role"></span>
+  `;
+
+  const name = logo.querySelector('.logo-name');
+  const role = logo.querySelector('.logo-role');
+
+  name.textContent = 'CENEN';
+
+  const words = ['FULLSTACK', 'DEVELOPER'];
+  let wordIndex = 0;
+
+  function typeWord() {
+    if (wordIndex >= words.length) return;
+
+    const word = words[wordIndex];
+    const span = document.createElement('span');
+
+    span.className = 'logo-word';
+    span.textContent = word;
+    role.appendChild(span);
+
+    wordIndex++;
+    setTimeout(typeWord, 500);
+  }
+
+  setTimeout(typeWord, 250);
+}
 });
+

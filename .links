@@ -266,3 +266,58 @@ section.blk{padding:clamp(56px,8vw,104px) 0;position:relative;}
     grid-template-columns: 1fr;
   }
 }
+.brand{
+  display:flex;
+  align-items:center;
+  gap:7px;
+  text-decoration:none;
+  color:var(--ink);
+  white-space:nowrap;
+}
+
+.logo-name{
+  font-family:'Bricolage Grotesque',sans-serif;
+  font-size:1.05rem;
+  font-weight:800;
+  letter-spacing:-.04em;
+}
+
+.logo-separator{
+  color:var(--ink2);
+  font-weight:600;
+  margin:0 1px;
+}
+
+.logo-role{
+  display:flex;
+  gap:5px;
+  font-family:'Bricolage Grotesque',sans-serif;
+  font-size:.68rem;
+  font-weight:700;
+  letter-spacing:.02em;
+  color:var(--ink2);
+}
+
+.logo-word{
+  animation:logoWordIn .35s ease both;
+}
+
+.logo-caret{
+  font-weight:700;
+  animation:logoBlink .7s steps(1) infinite;
+}
+
+@keyframes logoWordIn{
+  from{
+    opacity:0;
+    transform:translateY(4px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@keyframes logoBlink{
+  50%{opacity:0}
+}

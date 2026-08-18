@@ -426,7 +426,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
   onScroll();
 
   if(document.getElementById('screenLayer')) playSequence();
-  function renderLogo() {
+
+if(document.getElementById('siteLogo')) renderLogo();
+
+function renderLogo() {
   const logo = document.getElementById('siteLogo');
   if (!logo) return;
 

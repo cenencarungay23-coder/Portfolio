@@ -1,5 +1,5 @@
 /* ============================================================
-   Cecen — shared illustration library + behaviour
+   Cenen — shared illustration library + behaviour
    All artwork is hand-built SVG. No external images.
    ============================================================ */
 const REDUCED = matchMedia('(prefers-reduced-motion:reduce)').matches;
@@ -281,7 +281,6 @@ const PROJECTS = [
   {slug:'homesihave',   dom:'thehomesihavemade.com',    kind:'php',         sector:'Home & lifestyle',    year:'2019', layout:'grid'},
   {slug:'yeshair',      dom:'yeshair.com.au',           kind:'shopify',     sector:'Hair care',           year:'2024', layout:'shop'},
   {slug:'igkhair',      dom:'igkhair.com',              kind:'shopify',     sector:'Hair care',           year:'2024', layout:'shop'},
-  {slug:'soniarykiel',  dom:'soniarykiel.com',          kind:'shopify',     sector:'Fashion house',       year:'2023', layout:'shop'},
   {slug:'tens',         dom:'tens.co',                  kind:'shopify',     sector:'Eyewear',             year:'2023', layout:'shop'},
 ];
 const bySlug = s => PROJECTS.find(p=>p.slug===s);

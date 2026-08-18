@@ -118,14 +118,8 @@ section.blk{padding:clamp(56px,8vw,104px) 0;position:relative;}
   display:block;
 }
 
-.wcard .art img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position:top;
-  display:block;
-  transition:transform .35s;
-}
+
+
 
 .wcard:hover .art img{
   transform:scale(1.04);

@@ -28,9 +28,4 @@ nav.top .in{display;align-items;gap:12px;padding:12px 0;}
 @keyframes morph{50%{border-radius:44% 56% 56% 44%/48% 56% 44% 52%;transform(12deg);}}
 nav.top .links{margin-left;display;gap:4p
 
-               .brand img{
-  display:block;
-  width:auto;
-  height:30px;
-  max-width:none;
-}
+           

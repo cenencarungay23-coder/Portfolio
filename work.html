@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   function paint(kind){
     g.innerHTML=PROJECTS.filter(p=>kind==='all'||p.kind===kind).map(p=>`
       <a class="wcard" href="case.html?p=${p.slug}">
-        <div class="art">${artSite(p)}</div>
+        <div class="art"><img src="${projectImage(p)}" alt="${p.dom} website preview"></div>
         <div class="meta"><span><b>${p.dom}</b><small>${p.sector} · ${p.year}</small></span>
         <span class="tag" style="background:${KINDS[p.kind].c}2e">${KINDS[p.kind].label}</span></div>
       </a>`).join('');

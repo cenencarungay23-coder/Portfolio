@@ -1,7 +1,7 @@
 /* ============================================================
    Cenen — shared illustration library + behaviour
    All artwork is hand-built SVG. No external images.
-   ============================================================ */
+   ============================================================ *./
 const REDUCED = matchMedia('(prefers-reduced-motion:reduce)').matches;
 const C = {ink:'#191B2E',tomato:'#FF5C39',sky:'#3E7BFA',grass:'#2FA36B',sun:'#FFC53D',grape:'#8B5CF6',paper:'#fff'};
 

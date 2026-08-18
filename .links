@@ -41,7 +41,7 @@ nav.top .links a:hover,nav.top .links a.on{border-color:var(--ink);background:#f
   font-size:.97rem;
   min-height:52px;
   padding:14px 24px;
-  border-radius:99px;
+  border-radius:999px;
   border:2px solid var(--ink);
   background:#fff;
   cursor:pointer;

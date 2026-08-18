@@ -180,6 +180,16 @@ section.blk{padding:clamp(56px,8vw,104px) 0;position:relative;}
 
 /* ---------- parallax ---------- */
 .plx{will-change:transform;}
+#portrait{
+  width:320px;
+  max-width:100%;
+}
+
+#portrait img{
+  display:block;
+  width:100%;
+  height:auto;
+}
 
 /* ---------- finale ---------- */
 .finale{background:var(--ink);color:var(--bg);border-radius:30px;padding:clamp(34px,6vw,68px);text-align:center;position:relative;overflow:hidden;}
